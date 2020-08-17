@@ -38,7 +38,7 @@ npm install box-azure-migrate --save
 ***Method Name : migrate*** - Used to migrate data from your box to azure storage
 
 ```javascript
-var BoxAzureMigrateAPU = require('box-azure-migrate');
+var BoxAzureMigrateAPI = require('box-azure-migrate');
 
 // All the enviornment variable mentioned will be set in .env file
 const AzureURL = await BoxAzureMigrateAPI.migrate(AZURE_HOST,AZURE_CONTAINER,AZURE_STORAGE_ACCOUNT,AZURE_STORAGE_ACCESS_KEY,PROXY,BOX_CLIENT_ID,BOX_CLIENT_SECRET_ID,BOX_PRIVATE_KEY,BOX_PRIVATE_KEY_ID,BOX_PRIVATE_KEY_PASSPHRASE,BOX_ENTERPRISE_ID,BOX_PARENT_FOLDER);
