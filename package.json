@@ -1,0 +1,37 @@
+{
+  "name": "ms-graph-function",
+  "version": "1.0.11",
+  "description": "Node.js package for making Azure Active Directory Graph API calls",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saruatrathod/Box_To_Azure_Migrate"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "babel src --out-dir lib",
+    "prepare": "babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarika Rathod",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "azure-storage": "^2.10.3",
+    "box-node-sdk": "^1.34.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "path": "^0.12.7",
+    "fs": "0.0.1-security",
+    "rimraf": "^3.0.2"
+  }
+}
