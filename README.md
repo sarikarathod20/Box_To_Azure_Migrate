@@ -41,12 +41,10 @@ npm install box-azure-migrate --save
 var BoxAzureMigrateAPU = require('box-azure-migrate');
 
 // All the enviornment variable mentioned will be set in .env file
-const { successMessage, errorMessage } = BoxAzureMigrateAPI.migrate(AZURE_HOST,AZURE_CONTAINER,AZURE_STORAGE_ACCOUNT,AZURE_STORAGE_ACCESS_KEY,PROXY,BOX_CLIENT_ID,BOX_CLIENT_SECRET_ID,BOX_PRIVATE_KEY,BOX_PRIVATE_KEY_ID,BOX_PRIVATE_KEY_PASSPHRASE,BOX_ENTERPRISE_ID,BOX_PARENT_FOLDER);
+const AzureURL = await BoxAzureMigrateAPI.migrate(AZURE_HOST,AZURE_CONTAINER,AZURE_STORAGE_ACCOUNT,AZURE_STORAGE_ACCESS_KEY,PROXY,BOX_CLIENT_ID,BOX_CLIENT_SECRET_ID,BOX_PRIVATE_KEY,BOX_PRIVATE_KEY_ID,BOX_PRIVATE_KEY_PASSPHRASE,BOX_ENTERPRISE_ID,BOX_PARENT_FOLDER);
 
-if (!!successMessage) {
-    console.log("success Message==>", successMessage);
-} else {
-    console.log("error==>", errorMessage);
+if (!!AzureURL) {
+    console.log("Get Azure URL ==>", AzureURL);
 }
 
 ```
