@@ -6,7 +6,7 @@ var rimraf = require("rimraf");
 /* GET users listing. */
 //var listItems = [];
 let finaldata = [];
-let client, blobService,container,host;
+let client, blobService,container,host,boxcount=0, azurecount=0;;
 async function migrate(AZURE_HOST, AZURE_CONTAINER, AZURE_STORAGE_ACCOUNT, AZURE_STORAGE_ACCESS_KEY, PROXY, BOX_CLIENT_ID, BOX_CLIENT_SECRET_ID, BOX_PRIVATE_KEY, BOX_PUBLIC_KEY_ID, BOX_PRIVATE_KEY_PASSPHRASE, BOX_ENTERPRISE_ID, BOX_PARENT_FOLDER) {
   blobService = azure.createBlobService(AZURE_STORAGE_ACCOUNT, AZURE_STORAGE_ACCESS_KEY);
   blobService.setProxy(PROXY);
@@ -81,6 +81,7 @@ async function downloadresult(listItems, AZURE_HOST, AZURE_CONTAINER) {
       path.join(localFolderPath, folderfile.filename)
     );
     stream.pipe(output);
+    boxcount = boxcount + 1;
     return {
       oldpath: `${folderfile.fileid}/${folderfile.filename}`,
       localpath: output.path,
@@ -96,7 +97,11 @@ async function downloadresult(listItems, AZURE_HOST, AZURE_CONTAINER) {
     }, function() {
       let localFolderNamex = ('Docs/');
       rimraf(localFolderNamex, function () { console.log("done"); });
-      resolve(finaldata);
+      var obj = {};
+      obj.url = finaldata;
+      obj.boxCount = boxcount;
+      obj.azureCount = azurecount;
+      resolve(obj);
   });
 
 });
@@ -111,6 +116,7 @@ function op (data,cb) {
     else {
       var url = await blobService.getUrl(container, `${data.folderpath}`, null, host);
       data.azurepath = url;
+      azurecount = azurecount + 1;
       cb();
     }
   });
