@@ -2,7 +2,7 @@
 
 Node.js package for Migrating Files/Folders from Box Application to Azure Storage
 
-v0.0.8
+v0.0.10
 
 ## Installation
 

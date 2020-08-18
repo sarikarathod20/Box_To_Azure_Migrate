@@ -1,11 +1,11 @@
 {
   "name": "box-azure-migrate",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "Node.js package for migrating all files/folder from box application to azure storage",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saruatrathod/Box_To_Azure_Migrate.git"
+    "url": "git+https://github.com/sarikarathod20/Box_To_Azure_Migrate.git"
   },
   "scripts": {
     "start": "node lib/index.js",
@@ -36,9 +36,9 @@
     "rimraf": "^3.0.2"
   },
   "bugs": {
-    "url": "https://github.com/saruatrathod/Box_To_Azure_Migrate/issues"
+    "url": "https://github.com/sarikarathod20/Box_To_Azure_Migrate/issues"
   },
-  "homepage": "https://github.com/saruatrathod/Box_To_Azure_Migrate#readme",
+  "homepage": "https://github.com/sarikarathod20/Box_To_Azure_Migrate#readme",
   "keywords": [
     "node",
     "npm",
