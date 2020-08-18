@@ -2,7 +2,7 @@
 
 Node.js package for Migrating Files/Folders from Box Application to Azure Storage
 
-v0.0.1
+v0.0.8
 
 ## Installation
 
@@ -26,12 +26,12 @@ npm install box-azure-migrate --save
 | `AZURE_STORAGE_ACCESS_KEY`            | **Yes**   | Azure Storage Account name |     
 | `AZURE_STORAGE_CONNECTION_STRING`            | **Yes**   | Azure Storage connection string |      
 | `BOX_CLIENT_ID`            | **Yes**   | Box ClientID  |  
-| `BOX_CLIENT_SECRET_ID`            | **Yes**   | BOX_CLIENT_SECRET_ID  | 
-| `BOX_ENTERPRISE_ID`            | **Yes**   |  BOX_ENTERPRISE_ID | 
-| `BOX_PARENT_FOLDER`            | **Yes**   | BOX_PARENT_FOLDER  | 
-| `BOX_PRIVATE_KEY`            | **Yes**   | BOX_PRIVATE_KEY  | 
-| `BOX_PRIVATE_KEY_PASSPHRASE`            | **Yes**   | BOX_PRIVATE_KEY_PASSPHRASE  | 
-| `BOX_PUBLIC_KEY_ID`            | **Yes**   | BOX_PUBLIC_KEY_ID  | 
+| `BOX_CLIENT_SECRET_ID`            | **Yes**   | BOX CLIENT SECRET ID  | 
+| `BOX_ENTERPRISE_ID`            | **Yes**   |  BOX ENTERPRISE ID | 
+| `BOX_PARENT_FOLDER`            | **Yes**   | BOX PARENT FOLDER  | 
+| `BOX_PRIVATE_KEY`            | **Yes**   | BOX PRIVATE KEY  | 
+| `BOX_PRIVATE_KEY_PASSPHRASE`            | **Yes**   | BOX PRIVATE KEY PASSPHRASE  | 
+| `BOX_PUBLIC_KEY_ID`            | **Yes**   | BOX PUBLIC KEY ID  | 
 
 ### 3. Usage
 

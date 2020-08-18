@@ -1,6 +1,6 @@
 {
   "name": "box-azure-migrate",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "Node.js package for migrating all files/folder from box application to azure storage",
   "main": "lib/index.js",
   "repository": {
