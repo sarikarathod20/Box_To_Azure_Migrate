@@ -94,7 +94,7 @@ async function downloadresult(listItems, AZURE_HOST, AZURE_CONTAINER) {
   parallelizeTasks(finaldata, (nextTask, value) => {
       op(value, nextTask);
     }, function() {
-      let localFolderNamex = path.join(__dirname, '../Docs/');
+      let localFolderNamex = ('Docs/');
       rimraf(localFolderNamex, function () { console.log("done"); });
       resolve(finaldata);
   });
@@ -106,11 +106,10 @@ function op (data,cb) {
   blobService.createBlockBlobFromLocalFile(container, data.folderpath, data.folderpath, async function (error, result, response) {
     if (error) {
       cb();
-      console.log('bolob error=>', error);
+      console.log('blob error=>', error);
     }
     else {
       var url = await blobService.getUrl(container, `${data.folderpath}`, null, host);
-      console.log('url ==> ', url);
       data.azurepath = url;
       cb();
     }
@@ -144,7 +143,7 @@ function parallelizeTasks(arr, fn, done)
 // }
 
 function createLocalFolder(folderName) {
-  let localFolderName = path.join(__dirname, '../Docs/', folderName);
+  let localFolderName = path.join('Docs/', folderName);
   var create = true;
   try {
     fs.mkdirSync(localFolderName, { recursive: true });
